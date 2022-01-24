@@ -1,7 +1,101 @@
+:root {
+  --Brightorange: hsl(31, 77%, 52%);
+  --Darkcyan: hsl(184, 100%, 22%);
+  --Verydarkcyan: hsl(179, 100%, 13%);
+  --Transparentwhitebg: hsla(0, 0%, 100%, 0.75);
+  --Verylightgray: hsl(0, 0%, 95%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  flex-direction: column;
+  background-color: var(--backTransparentwhitebg);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-content: flex-end;
+  width: 80%;
+  max-width: 300px;
+  margin-bottom: 24px;
+}
+.sedans, .suv, .luxury{
+    padding: 40px 30px;
+}
+
+h1{
+    color :white;
+    font-size :2em;
+    padding: 16px 0;
+}
+
+p{
+    color :var(--Verylightgray);
+    opacity: 0.6;
+    line-height: 1.5em;
+}
+
+
+
+.sedans{
+    background-color: var(--Brightorange);
+    button{
+        color: var(--Brightorange);
+    }
+}
+.suv{
+    background-color: var(--Darkcyan);
+    button{
+        color: var(--Darkcyan);
+    }
+}
+.luxury{
+    background-color: var(--Verydarkcyan);
+    button{
+        color: var(--Verydarkcyan);
+    }
+}
+button{
+    background-color:white;
+    border: 2px solid white;
+    align-items: flex-end;
+    font-size: 1.3em;
+    margin:16px 0;
+    padding:14px 30px;
+    border-radius:5em;
+    &:hover{
+      color: white;
+      cursor: pointer;
+      background-color: inherit;
+    }
+}
 .attribution {
   font-size: 11px;
   text-align: center;
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+@media only screen and (min-width: 890px) {
+  .container{
+    flex-direction:row;
+    display: flex;
+    justify-content:center; 
+    width:80%;
+    max-width: 1440px;
+    height:60%;
+  }
+
 }

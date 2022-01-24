@@ -1,3 +1,112 @@
+:root {
+  --Brightorange: hsl(31, 77%, 52%);
+  --Darkcyan: hsl(184, 100%, 22%);
+  --Verydarkcyan: hsl(179, 100%, 13%);
+  --Transparentwhitebg: hsla(0, 0%, 100%, 0.75);
+  --Verylightgray: hsl(0, 0%, 95%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 100vh;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: var(--backTransparentwhitebg);
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -ms-flex-line-pack: end;
+      align-content: flex-end;
+  width: 80%;
+  max-width: 300px;
+  margin-bottom: 24px;
+}
+
+.sedans, .suv, .luxury {
+  padding: 40px 30px;
+}
+
+h1 {
+  color: white;
+  font-size: 2em;
+  padding: 16px 0;
+}
+
+p {
+  color: var(--Verylightgray);
+  opacity: 0.6;
+  line-height: 1.5em;
+}
+
+.sedans {
+  background-color: var(--Brightorange);
+}
+
+.sedans button {
+  color: var(--Brightorange);
+}
+
+.suv {
+  background-color: var(--Darkcyan);
+}
+
+.suv button {
+  color: var(--Darkcyan);
+}
+
+.luxury {
+  background-color: var(--Verydarkcyan);
+}
+
+.luxury button {
+  color: var(--Verydarkcyan);
+}
+
+button {
+  background-color: white;
+  border: 2px solid white;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  font-size: 1.3em;
+  margin: 16px 0;
+  padding: 14px 30px;
+  border-radius: 5em;
+}
+
+button:hover {
+  color: white;
+  cursor: pointer;
+  background-color: inherit;
+}
+
 .attribution {
   font-size: 11px;
   text-align: center;
@@ -5,5 +114,23 @@
 
 .attribution a {
   color: #3e52a3;
+}
+
+@media only screen and (min-width: 890px) {
+  .container {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 80%;
+    max-width: 1440px;
+    height: 60%;
+  }
 }
 /*# sourceMappingURL=style.css.map */
